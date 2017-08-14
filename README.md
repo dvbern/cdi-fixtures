@@ -1,4 +1,4 @@
-# dvbern-lib-cdifixtures
+# dvbern-lib-cdi-fixtures
 
 Fixture Framework to inject Testdata with CDI. You can define multiple configurators with different 
 data for each entity.
@@ -14,7 +14,7 @@ data for each entity.
 ```xml
 <dependency>
 	<groupId>ch.dvbern.oss.lib</groupId>
-	<artifactId>dvbern-lib-cdifixtures</artifactId>
+	<artifactId>dvbern-lib-cdi-fixtures</artifactId>
 	<version>(NEWEST_VERSION)</version>
 </dependency>
 ```
@@ -22,7 +22,7 @@ data for each entity.
 
 1. Create a Configurator
 
-The configurator needs to implement the interface ch.dvbern.lib.cdifixtures.Configurator<T>.
+The configurator needs to implement the interface ch.dvbern.lib.cdi-fixtures.Configurator<T>.
 In the configure()-method you can define the data needed for this specific configuration. 
 
 2. Use it in Test
@@ -61,7 +61,7 @@ One healthy social atmospehere is very important to us, wherefore we rate our Co
 
 * **DV Bern AG** - *Initial work* - [dvbern](https://github.com/dvbern)
 
-See also the list of [contributors](https://github.com/dvbern/lib-cdifixtures/contributors)
+See also the list of [contributors](https://github.com/dvbern/lib-cdi-fixtures/contributors)
  who participated in this project.
 
 ## License

@@ -25,7 +25,7 @@
 	</parent>
 
 	<groupId>ch.dvbern.oss.lib</groupId>
-	<artifactId>dvbern-lib-cdifixtures</artifactId>
+	<artifactId>dvbern-lib-cdi-fixtures</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0-SNAPSHOT</version>
 
@@ -59,7 +59,7 @@
 
 	<issueManagement>
 		<system>github-issues</system>
-		<url>https://github.com/dvbern/lib-cdifixtures/issues</url>
+		<url>https://github.com/dvbern/lib-cdi-fixtures/issues</url>
 	</issueManagement>
 
 	<properties>
