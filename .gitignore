@@ -1,0 +1,15 @@
+# Maven
+**/target/
+
+# IntelliJ/IDEA
+**/*.iml
+.idea
+
+### Eclipse template
+.metadata
+.settings/
+.loadpath
+.project
+.externalToolBuilders/
+*.launch
+.classpath
