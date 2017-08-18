@@ -110,7 +110,7 @@ public class FixtureObjectProducer {
 
 	private Configurator<?> filter(final Set<ConfiguratorInfo<?>> configuratorsWithMatchingType, final Type typeNeeded, final Name annotation,
 		final
-	ConfiguratorClass configuratorClass, final InjectionPoint injectionPoint) {
+		ConfiguratorClass configuratorClass, final InjectionPoint injectionPoint) {
 		final List<Configurator<?>> retValList = new ArrayList<Configurator<?>>();
 
 		for (final ConfiguratorInfo<?> configuratorInfo : configuratorsWithMatchingType) {

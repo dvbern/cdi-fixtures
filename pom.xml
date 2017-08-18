@@ -25,8 +25,8 @@
         <version>1.0.3</version>
     </parent>
 
-    <groupId>ch.dvbern.oss.lib.dvbern-lib-cdi-fixtures</groupId>
-    <artifactId>dvbern-lib-cdi-fixtures</artifactId>
+    <groupId>ch.dvbern.oss.lib.cdifixtures</groupId>
+    <artifactId>cdi-fixtures</artifactId>
     <packaging>jar</packaging>
     <version>1.0.3-SNAPSHOT</version>
 
@@ -39,9 +39,9 @@
             <version>4.9</version>
         </dependency>
         <dependency>
-            <groupId>ch.dvbern.oss.lib.dvbern-lib-cdi-test</groupId>
-            <artifactId>dvbern-lib-cdi-test</artifactId>
-            <version>1.0.0</version>
+            <groupId>ch.dvbern.oss.lib.cditest</groupId>
+            <artifactId>cdi-test</artifactId>
+            <version>1.0.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -60,7 +60,7 @@
 
     <issueManagement>
         <system>github-issues</system>
-        <url>https://github.com/dvbern/lib-cdi-fixtures/issues</url>
+        <url>https://github.com/dvbern/cdi-fixtures/issues</url>
     </issueManagement>
 
     <properties>

@@ -9,6 +9,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-# Kompatibility zu maven-dependency-plugin/maven-release-plugin... und damit zu jgitflow
+# Compitability to maven-dependency-plugin/maven-release-plugin... and thus to jgitflow
 [pom.xml]
 indent_style = space
