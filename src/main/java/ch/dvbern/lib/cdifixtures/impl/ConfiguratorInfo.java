@@ -21,7 +21,6 @@ import ch.dvbern.lib.cdifixtures.Configurator;
 import ch.dvbern.lib.cdifixtures.ConfiguratorClass;
 import ch.dvbern.lib.cdifixtures.Name;
 
-
 class ConfiguratorInfo<T> {
 
 	private final Configurator<T> configurator;

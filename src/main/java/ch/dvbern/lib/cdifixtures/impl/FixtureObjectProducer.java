@@ -67,7 +67,8 @@ public class FixtureObjectProducer {
 
 	@Produces
 	@Persisted
-	public <T> FixtureObject<T> producePersistingConfigurator(final InjectionPoint injectionPoint) throws IllegalAccessException, InstantiationException {
+	public <T> FixtureObject<T> producePersistingConfigurator(final InjectionPoint injectionPoint) throws IllegalAccessException,
+		InstantiationException {
 		return produce(injectionPoint, true);
 	}
 
@@ -83,7 +84,8 @@ public class FixtureObjectProducer {
 				}
 			}
 		} else {
-			throw new UnsatisfiedResolutionException("FixtureObject " + injectionPoint.getMember() + " must have the bean to be produced as generic type");
+			throw new UnsatisfiedResolutionException("FixtureObject " + injectionPoint.getMember() + " must have the bean to be produced as "
+				+ "generic type");
 		}
 		final Configurator<?> configurators = filter(configuratorsWithMatchingType, typeNeeded,
 			injectionPoint.getAnnotated().getAnnotation(Name.class),
@@ -92,11 +94,13 @@ public class FixtureObjectProducer {
 		FixtureObject<T> returnValue = null;
 		if (configurators != null) {
 			if (persistent) {
-				returnValue = new FixtureObjectImpl(new DefaultConstructorBeanInstantiator((Class<T>) typeNeeded), nonPersistent, fixtureBeanConfiguredEvent,
+				returnValue = new FixtureObjectImpl(new DefaultConstructorBeanInstantiator((Class<T>) typeNeeded), nonPersistent,
+					fixtureBeanConfiguredEvent,
 					startedEvent, finishedEvent,
 					configurators);
 			} else {
-				returnValue = new FixtureObjectImpl(new DefaultConstructorBeanInstantiator((Class<T>) typeNeeded), nonPersistent, fixtureBeanConfiguredEvent,
+				returnValue = new FixtureObjectImpl(new DefaultConstructorBeanInstantiator((Class<T>) typeNeeded), nonPersistent,
+					fixtureBeanConfiguredEvent,
 					null, null,
 					configurators);
 			}
@@ -104,7 +108,8 @@ public class FixtureObjectProducer {
 		return returnValue;
 	}
 
-	private Configurator<?> filter(final Set<ConfiguratorInfo<?>> configuratorsWithMatchingType, final Type typeNeeded, final Name annotation, final
+	private Configurator<?> filter(final Set<ConfiguratorInfo<?>> configuratorsWithMatchingType, final Type typeNeeded, final Name annotation,
+		final
 	ConfiguratorClass configuratorClass, final InjectionPoint injectionPoint) {
 		final List<Configurator<?>> retValList = new ArrayList<Configurator<?>>();
 
@@ -116,10 +121,11 @@ public class FixtureObjectProducer {
 			}
 		}
 		if (retValList.size() > 1) {
-			throw new AmbiguousResolutionException("Ambiguous configurations: " + retValList + " to be injected into " + injectionPoint.getMember());
+			throw new AmbiguousResolutionException("Ambiguous configurations: " + retValList + " to be injected into " + injectionPoint
+				.getMember());
 		} else if (retValList.isEmpty()) {
-			throw new UnsatisfiedResolutionException("Could not find an instance of " + Configurator.class + " with generic type " + typeNeeded + " to be "
-				+ "injected into " + injectionPoint.getMember());
+			throw new UnsatisfiedResolutionException("Could not find an instance of " + Configurator.class + " with generic type " + typeNeeded
+				+ " to be injected into " + injectionPoint.getMember());
 		}
 		return retValList.get(0);
 	}
