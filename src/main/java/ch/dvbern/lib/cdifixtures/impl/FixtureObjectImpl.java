@@ -31,17 +31,14 @@ import ch.dvbern.lib.cdifixtures.events.PersistentConfigurationStarted;
  */
 class FixtureObjectImpl<T> implements FixtureObject<T> {
 
-	private T t;
-
 	private final Configurator<T>[] configurators;
-
-	private boolean configured = false;
-
 	private final Event<PersistentConfigurationStarted> startedEvent;
 	private final Event<PersistentConfigurationFinished> finishedEvent;
 	private final Event<FixtureBeanConfigured> fixtureBeanConfiguredEvent;
 	private final boolean nonPersistent;
 	private final BeanInstantiator<T> beanInstantiator;
+	private T t;
+	private boolean configured = false;
 
 	FixtureObjectImpl(@Nonnull final BeanInstantiator<T> beanInstantiator,
 		final boolean nonPersistent,

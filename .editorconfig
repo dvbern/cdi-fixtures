@@ -1,0 +1,14 @@
+# http://editorconfig.org
+root = true
+
+[*.{java,xml}]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Compitability to maven-dependency-plugin/maven-release-plugin... and thus to jgitflow
+[pom.xml]
+indent_style = space
