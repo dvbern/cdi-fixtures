@@ -26,7 +26,7 @@
     <groupId>ch.dvbern.oss.cdifixtures</groupId>
     <artifactId>cdi-fixtures</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.7-SNAPSHOT</version>
 
     <name>DVBern CDI-Fixtures</name>
     <description>Fixture Framework to inject Testdata with CDI. You can define multiple configurators with different data for each entity</description>
