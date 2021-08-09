@@ -16,7 +16,7 @@
 package ch.dvbern.lib.cdifixtures.impl;
 
 /**
- * Erzeugt Beans vom Typ <T>
+ * Erzeugt Beans vom Typ {@code T}
  */
 public interface BeanInstantiator<T> {
 

@@ -22,38 +22,33 @@ public interface FixtureObject<T> {
 
 	/**
 	 * Erzeugt ein Bean vom Typ T, konfiguriert es entsprechend und gibt dieses zurück.
-	 * <p/>
+	 * <p>
 	 * Wenn diese Methode mehrmals aufgerufen wird wird stets dieselbe Instanz zurückgegeben, so dass
-	 * <p/>
-	 * <pre>
-	 *     {@code
-	 * 			fixtureObject.get() == fixtureObject.get()
-	 *     }
-	 * </pre>
-	 * gilt.
-	 * <p/>
+	 * {@code fixtureObject.get() == fixtureObject.get() } gilt.
+	 * <p>
 	 * Convenience-Methode für {@link #get(boolean)} mit {@code false} als Parameter
 	 *
 	 * @return eine Instanz von T, konfiguriert.
-	 * @see {@link #get(boolean)}
+	 * @see #get(boolean)
 	 */
 	T get();
 
 	/**
-	 * Erzeugt ein Bean vom Typ T, konfiguriert es entsprechend und gibt dieses zurück. Mit dem Parameter <tt>createNew</tt>
+	 * Erzeugt ein Bean vom Typ T, konfiguriert es entsprechend und gibt dieses zurück. Mit dem Parameter
+	 * <tt>createNew</tt>
 	 * wird definiert ob das Bean neu erstellt und konfiguriert werden soll:
-	 * <p/>
+	 *
 	 * <pre>
 	 *     {@code
-	 * 			fixtureObject.get(false) == fixtureObject.get(false)
-	 * 			fixtureObject.get(false) != fixtureObject.get(true)
-	 *          fixtureObject.get(true) != fixtureObject.get(true)
+	 * fixtureObject.get(false) == fixtureObject.get(false)
+	 * fixtureObject.get(false) != fixtureObject.get(true)
+	 * fixtureObject.get(true) != fixtureObject.get(true)
 	 * }
 	 * </pre>
-	 * <p/>
+	 * <p>
 	 * Convenience-Methode für {@link #get(boolean, Configurator)} mit {@code null} als 2. Parameter
 	 *
-	 * @param createNew wenn {@code true} wird eine neue Instanz von T erzeugt und konfiguriert. Bei <code>false</code>
+	 * @param createNew wenn {@code true} wird eine neue Instanz von T erzeugt und konfiguriert. Bei {@code false}
 	 * wird eine allenfalls bereits erzeuge Instanz ohne neue Konfiguration zurückgegeben.
 	 * @return eine Instanz von T, konfiguriert.
 	 */
@@ -62,18 +57,18 @@ public interface FixtureObject<T> {
 	/**
 	 * Erzeugt ein Bean vom Typ T, konfiguriert es zuerst mit dem definierten {@link Configurator} und danach mit dem
 	 * gegebenen {@link Configurator}und gibt dieses zurück.
-	 * <p/>
+	 * <p>
 	 * Mit dem Parameter <tt>createNew</tt>
 	 * wird definiert ob das Bean neu erstellt und konfiguriert werden soll:
-	 * <p/>
+	 *
 	 * <pre>
 	 *     {@code
-	 * 			fixtureObject.get(false) == fixtureObject.get(false)
-	 * 			fixtureObject.get(false) != fixtureObject.get(true)
-	 *          fixtureObject.get(true) != fixtureObject.get(true)
+	 * fixtureObject.get(false) == fixtureObject.get(false)
+	 * fixtureObject.get(false) != fixtureObject.get(true)
+	 * fixtureObject.get(true) != fixtureObject.get(true)
 	 * }
 	 * </pre>
-	 * <p/>
+	 * <p>
 	 * Convenience-Methode für {@link #get(boolean, Configurator)} mit {@code false} als 1. Parameter
 	 *
 	 * @param configurator den anzuwendenden {@link Configurator}. Darf auch {@code null} sein.
@@ -85,10 +80,10 @@ public interface FixtureObject<T> {
 	 * Erzeugt ein Bean vom Typ T, konfiguriert es zuerst mit dem definierten {@link Configurator}
 	 * (Parameter <tt>configurator</tt>) und danach mit dem
 	 * gegebenen {@link Configurator}und gibt dieses zurück.
-	 * <p/>
+	 * <p>
 	 * Mit dem Parameter <tt>createNew</tt>
 	 * wird definiert ob das Bean neu erstellt und konfiguriert werden soll:
-	 * <p/>
+	 *
 	 * <pre>
 	 *     {@code
 	 * 			fixtureObject.get(false) == fixtureObject.get(false)
@@ -96,8 +91,9 @@ public interface FixtureObject<T> {
 	 *          fixtureObject.get(true) != fixtureObject.get(true)
 	 * }
 	 * </pre>
-	 * <p/>
+	 * <p>
 	 *
+	 * @param createNew creates and configures new bean when {@code TRUE}
 	 * @param configurator den anzuwendenden {@link Configurator}
 	 * @return eine Instanz von T, konfiguriert.
 	 */
